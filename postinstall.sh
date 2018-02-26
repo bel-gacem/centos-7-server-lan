@@ -147,6 +147,18 @@ if ! rpm -q epel-release 2>&1 > /dev/null ; then
   echo
 fi
 
+# Configurer les dépôts [elrepo], [elrepo-kernel], etc. sans les activer
+if ! rpm -q elrepo-release 2>&1 > /dev/null ; then
+  echo "::"
+  echo -e ":: Configuration du dépôt de paquets ELRepo... \c"
+  rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org >> $LOG 2>&1
+  yum -y localinstall $CWD/config/yum/elrepo-release-*.rpm >> $LOG 2>&1
+  cat $CWD/config/yum/elrepo.repo > /etc/yum.repos.d/elrepo.repo
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+fi
+
 echo
 
 exit 0

@@ -3,10 +3,6 @@ TODO
 
   * Script pour revenir à une installation minimale.
 
-  * Configuration des dépôts ELRepo pour Yum.
-
-  * Installer les outils système Linux.
-
   * Modèles pour la configuration réseau.
 
   * Modèle de pare-feu standalone.
