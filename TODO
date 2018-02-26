@@ -1,0 +1,50 @@
+TODO
+====
+
+  * Script pour revenir à une installation minimale.
+
+  * Mise à jour initiale.
+
+  * Désactivation de l'IPv6.
+
+  * Personnalisation du shell Bash pour root.
+
+  * Personnalisation du shell pour les utilisateurs.
+
+  * Quelques options pratiques pour Vim.
+
+  * Configuration des dépôts de base pour Yum.
+
+  * Configuration du dépôt CR pour Yum.
+
+  * Installer le plug-in Yum-Priorities.
+
+  * Configurer le dépôt EPEL pour Yum.
+
+  * Configuration des dépôts ELRepo pour Yum.
+
+  * Installer les outils système Linux.
+
+  * Modèles pour la configuration réseau.
+
+  * Modèle de pare-feu standalone.
+
+  * Modèle de pare-feu passerelle.
+
+  * Client/serveur NTP.
+
+  * Modèle de fichier de configuration pour Dnsmasq.
+
+  * Règle de pare-feu pour Dnsmasq.
+
+  * Documentation détaillée.
+
+  * On utilise l'anglais de préférence.
+
+  * Configuration de l'affichage de la console.
+
+  * Démarrer Postfix sans IPv6.
+
+  * Afficher le menu de GRUB.
+
+  * Désactiver les services inutiles (ip6tables).
