@@ -3,8 +3,6 @@ TODO
 
   * Script pour revenir à une installation minimale.
 
-  * Configuration des dépôts de base pour Yum.
-
   * Configuration du dépôt CR pour Yum.
 
   * Installer le plug-in Yum-Priorities.
