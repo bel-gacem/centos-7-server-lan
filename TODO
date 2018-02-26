@@ -3,8 +3,6 @@ TODO
 
   * Script pour revenir à une installation minimale.
 
-  * Configurer le dépôt EPEL pour Yum.
-
   * Configuration des dépôts ELRepo pour Yum.
 
   * Installer les outils système Linux.
