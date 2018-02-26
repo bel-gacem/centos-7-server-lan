@@ -3,10 +3,6 @@ TODO
 
   * Script pour revenir à une installation minimale.
 
-  * Configuration du dépôt CR pour Yum.
-
-  * Installer le plug-in Yum-Priorities.
-
   * Configurer le dépôt EPEL pour Yum.
 
   * Configuration des dépôts ELRepo pour Yum.
