@@ -3,12 +3,6 @@ TODO
 
   * Script pour revenir à une installation minimale.
 
-  * Personnalisation du shell Bash pour root.
-
-  * Personnalisation du shell pour les utilisateurs.
-
-  * Quelques options pratiques pour Vim.
-
   * Configuration des dépôts de base pour Yum.
 
   * Configuration du dépôt CR pour Yum.
