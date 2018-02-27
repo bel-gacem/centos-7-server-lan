@@ -1,8 +1,6 @@
 TODO
 ====
 
-  * Documentation détaillée.
-
   * On utilise l'anglais de préférence.
 
   * Configuration de l'affichage de la console.
@@ -12,3 +10,5 @@ TODO
   * Afficher le menu de GRUB.
 
   * Désactiver les services inutiles (ip6tables).
+
+  * Article de blog mis à jour.
