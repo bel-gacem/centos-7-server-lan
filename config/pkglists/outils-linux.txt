@@ -32,7 +32,6 @@ syslinux
 time
 traceroute
 tree
-unrar
 unzip
 usbutils
 vim
