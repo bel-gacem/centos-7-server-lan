@@ -58,6 +58,10 @@ Le script se charge automatiquement des opérations suivantes.
 
   * Personnaliser la configuration de Vim.
 
+  * Définir l'anglais comme langue système.
+
+  * Configurer l'affichage de la console.
+
   * Configurer les dépôts de paquets officiels de manière prioritaire.
 
   * Configurer les dépôts de paquets tiers EPEL et ELRepo.

@@ -114,6 +114,16 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Configuration de l'affichage de la console
+echo "::"
+echo -e ":: Configuration de l'affichage de la console... \c"
+sleep $DELAY
+sed -i -e 's/"rhgb quiet"/"nomodeset quiet vga=791"/g' /etc/default/grub
+grub2-mkconfig -o /boot/grub2/grub.cfg >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 # Activer les dépôts [base], [updates] et [extras] avec une priorité de 1
 echo "::"
 echo -e ":: Configuration des dépôts de paquets officiels... \c"
