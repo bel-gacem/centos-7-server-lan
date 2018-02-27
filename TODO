@@ -1,10 +1,6 @@
 TODO
 ====
 
-  * Script pour revenir à une installation minimale.
-
-  * Modèles pour la configuration réseau.
-
   * Modèle de pare-feu standalone.
 
   * Modèle de pare-feu passerelle.
