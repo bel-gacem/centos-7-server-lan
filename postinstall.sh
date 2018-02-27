@@ -105,6 +105,15 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Passer le système en anglais
+echo "::"
+echo -e ":: Passer le système en anglais... \c"
+sleep $DELAY
+localectl set-locale LANG=en_US.UTF8
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 # Activer les dépôts [base], [updates] et [extras] avec une priorité de 1
 echo "::"
 echo -e ":: Configuration des dépôts de paquets officiels... \c"
