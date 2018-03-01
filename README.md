@@ -68,6 +68,8 @@ Le script se charge automatiquement des opérations suivantes.
 
   * Installer une panoplie d'outils système.
 
+  * Supprimer les paquets inutiles.
+
 Une fois que le script est arrivé à terme, on peut créer un nouvel utilisateur.
 
 <pre>
