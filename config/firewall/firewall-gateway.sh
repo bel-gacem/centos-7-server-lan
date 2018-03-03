@@ -14,6 +14,9 @@ IFACE_INET=enp2s0
 IFACE_LAN=enp3s1
 IFACE_LAN_IP=192.168.3.0/24
 
+# Serveur
+SERVER_IP=192.168.3.1
+
 # Activer le relais des paquets ? (yes/no)
 MASQ=yes
 
