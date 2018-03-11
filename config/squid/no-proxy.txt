@@ -1,0 +1,10 @@
+# Ne pas utiliser le proxy pour les domaines suivants
+#
+# Github
+github.com
+# Microlinux
+cloud.microlinux.eu
+# Squid
+squid-cache.org
+# Thunderbird
+start.thunderbird.net
