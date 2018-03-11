@@ -7,4 +7,5 @@ cloud.microlinux.eu
 # Squid
 squid-cache.org
 # Thunderbird
+live.mozillamessaging.com
 start.thunderbird.net
