@@ -1,11 +1,33 @@
-# Ne pas utiliser le proxy pour les domaines suivants
-#
-# Github
-github.com
-# Microlinux
-cloud.microlinux.eu
+# Adobe updates (web installation)
+# This requires to splice due to SSL-pinned web-downloader
+(get|platformdl|fpdownload|ardownload[0-9])\.adobe\.com
+# Symantec CAT submission
+(tus1gwynwapex01|ent\-shasta\-mr\-clean|ent\-shasta\-rrs|services\-prod|tses|stats)\.(symantec|norton)\.com
+# Web.whatsapp.com
+w[0-9]+\.web\.whatsapp\.com
+# ABP updates
+easylist\-downloads\.adblockplus\.org
+# Wire
+prod\-nginz\-ssl\.wire\.com
+# Telegram
+^149\.154\.1(6[4-7]|7[2-5])\.[1-2]?[0-5]?[0-5]?
+# Signal
+textsecure\-service\-ca\.whispersystems\.org
+# Plarium POST issue
+plrm\.zone
+# Vimeo playback issue: POST spliced
+(fresnel|player)\.vimeoc?d?n?\.com
+vimeo\.com
+# Teamviewer
+(master|ping)[0-9][0-9]?\.teamviewer\.com
+# Lastpass
+.lastpass\.com
 # Squid
-squid-cache.org
+.squid\-cache\.org
+# Github
+github\.com
+# Microlinux
+cloud\.microlinux\.eu
 # Thunderbird
-live.mozillamessaging.com
-start.thunderbird.net
+start\.thunderbird\.net
+live\.mozillamessaging\.com

@@ -1,9 +1,3 @@
-# Exceptions
-EXCEPTIONS=$(egrep -v '(^\#)|(^\s+$)' /usr/local/sbin/no-proxy.txt)
-for EXCEPTION in $EXCEPTIONS; do
-  $IPT -A PREROUTING -t nat -i $IFACE_LAN -d $EXCEPTION -j ACCEPT
-done
-
 # Squid 
 $IPT -A INPUT -p tcp -i $IFACE_LAN --dport 3128 -j ACCEPT
 $IPT -A INPUT -p udp -i $IFACE_LAN --dport 3128 -j ACCEPT
