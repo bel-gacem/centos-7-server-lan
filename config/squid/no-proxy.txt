@@ -31,3 +31,5 @@ cloud\.microlinux\.eu
 # Thunderbird
 start\.thunderbird\.net
 live\.mozillamessaging\.com
+# DWS
+.dwservice\.net
