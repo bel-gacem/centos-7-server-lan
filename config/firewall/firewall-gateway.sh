@@ -4,6 +4,7 @@
 
 # Commandes
 IPT=/usr/sbin/iptables
+MOD=/usr/sbin/modprobe
 SYS=/usr/sbin/sysctl
 SERVICE=/usr/sbin/service
 
