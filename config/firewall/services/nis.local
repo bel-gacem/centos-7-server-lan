@@ -1,0 +1,10 @@
+# RPC
+$IPT -A INPUT -p tcp -i $IFACE_LAN --dport 111 -j ACCEPT
+$IPT -A INPUT -p udp -i $IFACE_LAN --dport 111 -j ACCEPT
+
+# NIS
+$IPT -A INPUT -p tcp -i $IFACE_LAN --dport 944 -j ACCEPT
+$IPT -A INPUT -p udp -i $IFACE_LAN --dport 944 -j ACCEPT
+$IPT -A INPUT -p tcp -i $IFACE_LAN --dport 945 -j ACCEPT
+$IPT -A INPUT -p udp -i $IFACE_LAN --dport 945 -j ACCEPT
+$IPT -A INPUT -p udp -i $IFACE_LAN --dport 946 -j ACCEPT

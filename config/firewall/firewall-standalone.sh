@@ -3,6 +3,7 @@
 # firewall-standalone.sh
 
 IPT=/usr/sbin/iptables
+MOD=/usr/sbin/modprobe
 SERVICE=/usr/sbin/service
 
 # Réseau local
