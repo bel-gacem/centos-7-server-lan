@@ -1,202 +1,316 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Microlinux - Configuration du serveur proxy</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta name="robots" content="noindex" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+  /* Postes de travail */
+  body {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    font-family: "OpenSans", Helvetica, sans-serif;
+    font-size: 18px;
+    color: #234;
+  }
+  img {
+    border: 0;
+  }
+  /* Smartphones */
+  @media screen and (max-width: 768px) {
+    body {
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 16px;
+    }
+    ol {
+      margin: 5;
+      padding: 5;
+    }
+    li {
+      margin: 5;
+      padding: 5;
+    }
+  }
 
-<!-- Bootstrap -->
-<link href="/noindex/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="noindex/css/open-sans.css" type="text/css" />
-
-<style type="text/css"><!--		 
-
-body {
-  font-family: "Open Sans", Helvetica, sans-serif;
-  font-weight: 100;
-  color: #ccc;
-  background: rgba(10, 24, 55, 1);
-  font-size: 16px;
-}
-
-h2, h3, h4 {
-  font-weight: 200;
-}
-
-h2 {
-  font-size: 28px;
-}
-
-.jumbotron {
-  margin-bottom: 0;
-  color: #333;
-  background: rgb(212,212,221); /* Old browsers */
-  background: radial-gradient(ellipse at center top, rgba(255,255,255,1) 0%,rgba(174,174,183,1) 100%); /* W3C */
-}
-
-.jumbotron h1 {
-  font-size: 100px;
-  font-weight: 700;
-  color: white;
-  text-shadow: 0px 2px 0px #abc,
-               0px 4px 10px rgba(0,0,0,0.15),
-               0px 5px 2px rgba(0,0,0,0.1),
-               0px 6px 30px rgba(0,0,0,0.1);
-}
-
-.jumbotron p {
-  font-size: 28px;
-  font-weight: 100;
-}
-
-.main {
-   background: white;
-   color: #234;
-   border-top: 1px solid rgba(0,0,0,0.12);
-   padding-top: 30px;
-   padding-bottom: 40px;
-}
-
-.footer {
-   border-top: 1px solid rgba(255,255,255,0.2);
-   padding-top: 30px;
-}
-
-.alignright {
-  float: right;
-}
-
---></style>
+</style>
+<title>Proxy Microlinux</title>
 </head>
-
 <body>
 
-<div class="jumbotron text-center">
-<div class="container">
-<!-- <h1>Microlinux</h1> -->
-<p class="lead">Bienvenue sur le réseau de Microlinux. Pour utiliser l'accès
-Internet de l'entreprise, veuillez télécharger le <a
-href="nestor.microlinux.lan.der">certificat SSL</a>, qui s'installera
-automatiquement dans votre navigateur.</p>
-</div>
-</div>
+<h1>Proxy Microlinux</h1>
 
-<div class="main">
-<div class="container">
-<div class="row">
-<div class="col-sm-6">
+<p>Microlinux fournit un accès Internet libre pour tous ses visiteurs. La loi
+nous oblige cependant à filtrer cet accès pour garder un suivi complet de
+toutes les connexions.</p>
 
-<h2>Un souci ?</h2>
-<p class="lead">Si le certificat SSL ne s'est pas installé automatiquement,
-procédez à une installation manuelle. C'est très simple.</p>
+<p>Si vous souhaitez accéder à Internet, il vous suffit d'installer le
+certificat SSL de l'entreprise. Cette page contient des instructions pour les
+systèmes et les navigateurs web les plus courants.</p> 
 
-<p><img src="images/firefox.png" 
-width="128" height="128"
-alt="Mozilla Firefox"
-title="Mozilla Firefox"
-class="alignright"
-/></p>
+<p>Sélectionnez votre plateforme en cliquant sur le logo correspondant.</a> 
 
-<h2>Mozilla Firefox</h2>
+<p align="center">
+<a href="#windows"><img src="images/windows.png" alt="Microsoft Windows"
+title="Microsoft Windows" /></a>
+<a href="#macosx"><img src="images/macosx.png" alt="Mac OS X" title="Mac OS X"
+/></a>
+<a href="#linux"><img src="images/linux.png" alt="Linux" title="Linux" /></a>
+<a href="#android"><img src="images/android.png" alt="Android" title="Android" /></a>
+<a href="#ios"><img src="images/ios.png" alt="iOS" title="iOS" /></a>
+</p>
 
-<p>Si vous ne voyez pas la barre de menus du navigateur, faites un clic droit
-sur les trois traits horizontaux en haut à droite de la fenêtre et cochez
-<em>Barre de menus</em>.  Ouvrez <em>Outils</em> &gt; <em>Options</em> (ou
-<em>Édition</em> &gt; <em>Préférences</em> sous Linux). Dans l'onglet
-<em>Avancé</em>, cliquez sur <em>Certificats</em> &gt; <em>Afficher les
-certificats</em> et cliquez sur <em>Importer</em>.  Sélectionnez le certificat
-et cochez l'ensemble des options proposées.</p>
+<p>&nbsp;</p>
 
-<p><img src="images/chrome.png" 
-width="128" height="128"
-alt="Google Chrome"
-title="Google Chrome"
-class="alignright"
-/></p>
+<h2 id="windows">Microsoft Windows</h2>
 
-<h2>Google Chrome</h2>
+<p>Sélectionnez votre navigateur web dans la liste.</p>
 
-<p>Ouvrez <em>Paramètres</em> &gt; <em>Paramètres avancés</em> &gt; <em>Gérer
-les certificats</em> &gt; <em>Autorités</em> et cliquez sur <em>Importer</em>.
-Importez le certificat en cochant tous les paramètres de confiance.</p>
+<p align="center">
 
-</div>
+<a href="#windows-firefox"><img src="images/firefox.png" alt="Mozilla Firefox
+pour Windows" title="Mozilla Firefox pour Windows" /></a>
 
-<!-- colonne de droite -->
+<a href="#windows-chrome"><img src="images/chrome.png" alt="Google Chrome pour
+Windows" title="Google Chrome pour Windows" /></a>
 
-<div class="col-sm-6">
+<a href="#windows-explorer"><img src="images/explorer.png" alt="Internet
+Explorer pour Windows" title="Internet Explorer pour Windows" /></a>
 
-<h2>Internet Explorer</h2>
+</p>
 
-<p><img src="images/explorer.png" 
-width="128" height="128"
-alt="Internet Explorer"
-title="Internet Explorer"
-class="alignright"
-/></p>
+<p>&nbsp;</p>
 
-<p>Ouvrez les <em>Options Internet</em>. Allez dans <em>Contenu</em> &gt;
-<em>Certificats</em> et cliquez sur <em>Importer</em>. L'<em>Assistant
-d'importation de certificat</em> s'ouvre. Cliquez sur <em>Suivant</em>, puis
-<em>Parcourir</em>, et sélectionnez impérativement <em>Tous les fichiers
-(*.*)</em> dans le sélecteur de types de fichiers en bas à droite, sinon vous
-ne trouverez pas votre certificat. Ensuite, sélectionnez le certificat et
-cliquez sur <em>Ouvrir</em>, puis <em>Suivant</em>. Dans le dialogue <em>Placer
-tous les certificats dans le magasin suivant</em>, cliquez sur
-<em>Parcourir</em>, choisissez <em>Autorités de certification racine de
-confiance</em>et confirmez par <em>OK</em>, puis <em>Suivant</em> et
-<em>Terminer</em>. Enfin, confirmez par <em>Oui</em> et <em>OK</em>
-lorsqu'Internet Explorer vous affiche un <em>Avertissement de
-sécurité</em>.</p>
+<h3 id="windows-firefox">Mozilla Firefox pour Windows</h3>
 
-<h2>Konqueror</h2>
+<ol>
 
-<p><img src="images/konqueror.png" 
-width="128" height="128"
-alt="Konqueror"
-title="Konqueror"
-class="alignright"
-/></p>
+  <li><a href="nestor.microlinux.lan.der">Téléchargez</a> le certificat.</li>
+  
+  <li>Dans la fenêtre de téléchargement, choisissez <strong>Enregistrer le
+  fichier</strong>.</li>
+  
+  <li>Rangez le fichier dans vos <strong>Téléchargements</strong>.</li>
 
-<p>L’ajout du certificat dans Konqueror ne se fait pas directement dans la
-configuration du navigateur, mais dans les <em>Préférences SSL</em> de KDE.
-Cliquez sur <em>Ajouter</em>, sélectionnez le certificat et confirmez en
-cliquant sur <em>Appliquer</em>. Le certificat apparaît alors tout en bas dans
-la liste, dans les <em>Certificats ajoutés par l’utilisateur</em>.</p>
+  <li>Si vous ne voyez pas la barre de menus de Firefox, faites un clic droit
+  sur les trois traits horizontaux <strong>Ouvrir le menu</strong> en haut à
+  droite de la fenêtre et cochez <strong>Barre de menus</strong>.</li>
 
-<p><a href="http://httpd.apache.org/"><img src="images/apache_pb.gif" alt="[
-Powered by Apache ]"></a> <a href="http://www.centos.org/"><img
-src="images/poweredby.png" alt="[ Powered by CentOS Linux ]" height="31"
-width="88"></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <li>Ouvrez <strong>Outils</strong> &gt; <strong>Options</strong>.</li> 
+  
+  <li>Cliquez sur l'onglet <strong>Vie privée et sécurité</strong> et descendez
+  à la section <strong>Certificats</strong>.</li>
+  
+  <li>Si vous avez une ancienne version de Firefox, la section
+  <strong>Certificats</strong> se trouve dans l'onglet
+  <strong>Avancé</strong>.</li>
 
-<!-- pied de page -->
-	  <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">          
-            <h2>Important note:</h2>
-            <p class="lead">The CentOS Project has nothing to do with this website or its content,
-            it just provides the software that makes the website run.</p>
-            
-            <p>If you have issues with the content of this site, contact the owner of the domain, not the CentOS project. 
-            Unless you intended to visit CentOS.org, the CentOS Project does not have anything to do with this website,
-            the content or the lack of it.</p>
-            <p>For example, if this website is www.example.com, you would find the owner of the example.com domain at the following WHOIS server:</p>
-            <p><a href="http://www.internic.net/whois.html">http://www.internic.net/whois.html</a></p>
-          </div>
-          <div class="col-sm-6">
-            <h2>The CentOS Project</h2>
-            <p>The CentOS Linux distribution is a stable, predictable, manageable and reproduceable platform derived from 
-               the sources of Red Hat Enterprise Linux (RHEL).<p>
-            
-            <p>Additionally to being a popular choice for web hosting, CentOS also provides a rich platform for open source communities to build upon. For more information
-               please visit the <a href="http://www.centos.org/">CentOS website</a>.</p>
-          </div>
-        </div>
-		  </div>
-    </div>
-  </div>
-</body></html>
+  <li>Cliquez sur <strong>Afficher les certificats</strong>, puis sur
+  <strong>Importer</strong>.</li>
+  
+  <li>Importez le certificat téléchargé et cliquez sur <strong>Ouvrir</strong>.</li>
+
+  <li>Cochez les trois options <strong>Confirmer cette AC...</strong> et
+  terminez en cliquant sur <strong>OK</strong>.</li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+<h3 id="windows-chrome">Google Chrome pour Windows</h3>
+
+<ol>
+
+  <li><a href="nestor.microlinux.lan.der">Téléchargez</a> le certificat.</li>
+
+  <li>Ouvrez le menu principal de Chrome en cliquant sur le bouton
+  <strong>Personnaliser et contrôler Google Chrome</strong> symbolisé par trois
+  petits points verticaux en haut à droite de la fenêtre.</li>
+
+  <li>Allez dans <strong>Paramètres</strong>.</li>
+
+  <li>Descendez sur la page et cliquez sur <strong>Paramètres
+  avancés</strong>.</li>
+
+  <li>Cliquez sur <strong>Gérer les certificats</strong>.</li>
+  
+  <li>Cliquez sur <strong>Importer</strong>.</li>
+
+  <li>L'Assistant Importation de Certificats se lance. Cliquez sur
+  <strong>Suivant</strong>.</li>
+
+  <li>Repérez le champ <strong>Nom du fichier</strong> et cliquez sur
+  <strong>Parcourir</strong>.</li>
+
+  <li>Dans le menu déroulant en bas à droite du sélecteur de fichiers,
+  choisissez <strong>Tous les fichiers (*.*)</strong>.</li>
+
+  <li>Sélectionnez le certificat <code>nestor.microlinux.lan</code> et cliquez
+  sur <strong>Ouvrir</strong>, puis sur <strong>Suivant</strong>.</li>
+
+  <li>Dans l'option <strong>Magasin de certificats</strong>, cliquez sur
+  <strong>Parcourir</strong> et choisissez <strong>Autorités de certification
+  racines de confiance</strong>. Cliquez sur <strong>Suivant</strong>.</li>
+
+  <li>Cliquez sur <strong>Terminer</strong> et confirmez l'installation du
+  certificat.</li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+<h3 id="windows-explorer">Internet Explorer pour Windows</h3>
+
+<ol>
+
+  <li>Téléchargez le certificat en effectuant un <a
+  href="nestor.microlinux.lan.der">clic droit sur ce lien</a> et en choisissant
+  <strong>Enregistrer la cible sous...</strong> dans le menu contextuel.</li>
+
+  <li>Enregistrez le fichier <code>nestor.microlinux.lan</code> dans vos
+  <strong>Téléchargements</strong>.</li>
+
+  <li>Dans le menu d'Internet Explorer en haut à droite de la fenêtre, ouvrez
+  <strong>Outils</strong> &gt; <strong>Options Internet</strong>.</li>
+
+  <li>Dans l'onglet <strong>Contenu</strong>, cliquez sur le bouton
+  <strong>Certificats</strong>.</li>
+
+  <li>Cliquez sur <strong>Importer</strong>, ce qui lance l'Assistant
+  Importation de Certificats. Cliquez sur <strong>Suivant</strong>.</li>
+
+  <li>Repérez le champ <strong>Nom du fichier</strong> et cliquez sur
+  <strong>Parcourir</strong>.</li>
+
+  <li>Dans le menu déroulant en bas à droite du sélecteur de fichiers,
+  choisissez <strong>Tous les fichiers (*.*)</strong>.</li>
+
+  <li>Sélectionnez le certificat <code>nestor.microlinux.lan</code> et cliquez
+  sur <strong>Ouvrir</strong>, puis sur <strong>Suivant</strong>.</li>
+
+  <li>Dans l'option <strong>Magasin de certificats</strong>, cliquez sur
+  <strong>Parcourir</strong> et choisissez <strong>Autorités de certification
+  racines de confiance</strong>. Cliquez sur <strong>Suivant</strong>.</li>
+
+  <li>Cliquez sur <strong>Terminer</strong> et confirmez l'installation du
+  certificat.</li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+<h2 id="macosx">Mac OS X</h2>
+
+<p>Sélectionnez votre navigateur web dans la liste.</p>
+
+<p align="center">
+
+<a href="#macosx-safari"><img src="images/safari.png" alt="Safari pour Mac OS
+X" title="Safari pour Mac OS X" /></a>
+
+<a href="#macosx-firefox"><img src="images/firefox.png" alt="Mozilla Firefox
+pour Mac OS X" title="Mozilla Firefox pour Mac OS X" /></a>
+
+<a href="#macosx-chrome"><img src="images/chrome.png" alt="Google Chrome pour
+Mac OS X" title="Google Chrome pour Mac OS X" /></a>
+
+</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2 id="linux">Linux</h2>
+
+<p>Sélectionnez votre navigateur web dans la liste.</p>
+
+<p align="center">
+
+<a href="#linux-firefox"><img src="images/firefox.png" alt="Mozilla Firefox
+pour Linux" title="Mozilla Firefox pour Linux" /></a>
+
+<a href="#linux-chrome"><img src="images/chrome.png" alt="Google Chrome pour
+Linux" title="Google Chrome pour Linux" /></a>
+
+<a href="#linux-konqueror"><img src="images/konqueror.png" alt="Konqueror pour
+Linux" title="Konqueror pour Linux" /></a>
+
+</p>
+
+<p>&nbsp;</p>
+
+<h3 id="linux-firefox">Mozilla Firefox pour Linux</h3>
+
+<ol>
+
+  <li><a href="nestor.microlinux.lan.der">Cliquez ici</a> pour importer le
+  certificat directement.</li>
+
+  <li>Cochez les trois options <strong>Confirmer cette AC...</strong> et
+  terminez en cliquant sur <strong>OK</strong>.</li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+<h3 id="linux-chrome">Google Chrome pour Linux</h3>
+
+<ol>
+
+  <li><a href="nestor.microlinux.lan.der">Téléchargez</a> le certificat.</li>
+
+  <li>Ouvrez le menu principal de Chrome en cliquant sur le bouton
+  <strong>Personnaliser et contrôler Google Chrome</strong> symbolisé par trois
+  petits points verticaux en haut à droite de la fenêtre.</li>
+
+  <li>Allez dans <strong>Paramètres</strong>.</li>
+
+  <li>Descendez sur la page et cliquez sur <strong>Paramètres
+  avancés</strong>.</li>
+
+  <li>Cliquez sur <strong>Gérer les certificats</strong>.</li>
+
+  <li>Ouvrez l'onglet <strong>Autorités</strong>.</li>
+  
+  <li>Cliquez sur <strong>Importer</strong>.</li>
+
+  <li>Importez le fichier <code>nestor.microlinux.lan.der</code> depuis vos
+  <strong>Téléchargements</strong>.</li>
+
+  <li>Cochez les trois options <strong>Considérer ce certificat comme
+  fiable...</strong> et terminez en cliquant sur <strong>OK</strong>.</li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+<h3 id="linux-konqueror">Konqueror pour Linux</h3>
+
+<ol>
+
+  <li><a href="nestor.microlinux.lan.der">Téléchargez</a> le certificat.</li>
+
+  <li>Enregistrez le fichier <code>nestor.microlinux.lan.der</code> dans vos
+  <strong>Téléchargements</strong>.</li>
+
+  <li>Ouvrez <strong>Menu KDE</strong> &gt; <strong>Configuration du
+  système</strong> &gt; <strong>Préférences SSL</strong>.</li>
+
+  <li>Cliquez sur <strong>Ajouter</strong>.</li>
+
+  <li>Sélectionnez le certificat <code>nestor.microlinux.lan.der</code> dans
+  vos <strong>Téléchargements</strong>.</li>
+
+  <li>Confirmez en cliquant sur <strong>Appliquer</strong>.</li>
+
+  <li>Le certificat apparaît tout en bas dans la liste, dans les
+  <strong>Certificats ajoutés par l'utilisateur</strong>.</li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+</body>
+</html>
+
