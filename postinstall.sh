@@ -49,7 +49,6 @@ echo
 sleep $DELAY
 
 # Pour l'instant on n'utilise que l'IPv4
-echo "::"
 echo -e ":: Désactivation de l'IPv6... \c"
 sleep $DELAY
 cat $CWD/config/sysctl.d/disable-ipv6.conf > /etc/sysctl.d/disable-ipv6.conf
@@ -107,8 +106,6 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-exit 0
-
 # Activer les dépôts [base], [updates] et [extras] avec une priorité de 1
 echo "::"
 echo -e ":: Configuration des dépôts de paquets officiels... \c"
@@ -130,6 +127,7 @@ echo
 
 # Activer la gestion des Delta RPM
 if ! rpm -q deltarpm 2>&1 > /dev/null ; then
+  echo "::"
   echo -e ":: Activer la gestion des Delta RPM... \c"
   yum -y install deltarpm >> $LOG 2>&1
   echo -e "[${VERT}OK${GRIS}] \c"
@@ -139,6 +137,7 @@ if ! rpm -q deltarpm 2>&1 > /dev/null ; then
 fi
 
 # Mise à jour initiale
+echo "::"
 echo -e ":: Mise à jour initiale du système... \c"
 yum -y update >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
@@ -159,7 +158,7 @@ fi
 if ! rpm -q epel-release 2>&1 > /dev/null ; then
   echo "::"
   echo -e ":: Configuration du dépôt de paquets EPEL... \c"
-  rpm --import http://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7 >> $LOG 2>&1
+  rpm --import http://mirrors.ircam.fr/pub/fedora/epel/RPM-GPG-KEY-EPEL-7 >> $LOG 2>&1
   yum -y install epel-release >> $LOG 2>&1
   cat $CWD/config/yum/epel.repo > /etc/yum.repos.d/epel.repo
   cat $CWD/config/yum/epel-testing.repo > /etc/yum.repos.d/epel-testing.repo
@@ -179,14 +178,6 @@ if ! rpm -q elrepo-release 2>&1 > /dev/null ; then
   sleep $DELAY
   echo
 fi
-
-# Synchroniser les dépôts de paquets
-echo "::"
-echo -e ":: Synchronisation des dépôts de paquets... \c"
-yum check-update >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
 
 # Installer les outils Linux listés dans config/pkglists/outils-linux.txt
 echo "::"
