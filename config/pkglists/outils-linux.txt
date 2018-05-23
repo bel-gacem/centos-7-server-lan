@@ -25,6 +25,7 @@ ntp
 pciutils
 pinfo
 pm-utils
+python2-speedtest-cli
 psmisc
 recode
 rtorrent
