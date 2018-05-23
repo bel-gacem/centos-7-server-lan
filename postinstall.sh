@@ -48,23 +48,6 @@ echo "       # tail -f /tmp/postinstall.log"
 echo
 sleep $DELAY
 
-# Activer la gestion des Delta RPM
-if ! rpm -q deltarpm 2>&1 > /dev/null ; then
-  echo -e ":: Activer la gestion des Delta RPM... \c"
-  yum -y install deltarpm >> $LOG 2>&1
-  echo -e "[${VERT}OK${GRIS}] \c"
-  sleep $DELAY
-  echo
-  echo "::"
-fi
-
-# Mise à jour initiale
-echo -e ":: Mise à jour initiale du système... \c"
-yum -y update >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
 # Pour l'instant on n'utilise que l'IPv4
 echo "::"
 echo -e ":: Désactivation de l'IPv6... \c"
@@ -124,6 +107,8 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+exit 0
+
 # Activer les dépôts [base], [updates] et [extras] avec une priorité de 1
 echo "::"
 echo -e ":: Configuration des dépôts de paquets officiels... \c"
@@ -139,6 +124,23 @@ echo "::"
 echo -e ":: Configuration du dépôt de paquets CR... \c"
 sleep $DELAY
 cat $CWD/config/yum/CentOS-CR.repo > /etc/yum.repos.d/CentOS-CR.repo
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
+# Activer la gestion des Delta RPM
+if ! rpm -q deltarpm 2>&1 > /dev/null ; then
+  echo -e ":: Activer la gestion des Delta RPM... \c"
+  yum -y install deltarpm >> $LOG 2>&1
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+  echo "::"
+fi
+
+# Mise à jour initiale
+echo -e ":: Mise à jour initiale du système... \c"
+yum -y update >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
